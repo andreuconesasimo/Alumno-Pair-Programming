@@ -1,0 +1,1 @@
+Es necesario reiniciar el SQLServer tras añadir la variable de entorno y antes de ejecutar el script de creación de la base de datos v1

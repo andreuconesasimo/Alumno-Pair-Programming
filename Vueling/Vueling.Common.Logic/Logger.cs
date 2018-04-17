@@ -25,30 +25,14 @@ namespace Vueling.Common.Logic
             Log = log4net.LogManager.GetLogger(tipo);
         }
 
-
         public void Debug(string message)
         {
             if(isDebugEnabled) Log.Debug(message);
         }
 
-        public void Debug(string format, params object[] args)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EmailException(string msg)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Error(string message)
         {
             if(isErrorEnabled) Log.Error(message);
-        }
-
-        public void Error(string format, params object[] args)
-        {
-            throw new NotImplementedException();
         }
 
         public void Exception(Exception exception, string message)
@@ -59,42 +43,6 @@ namespace Vueling.Common.Logic
         public void Exception(Exception exception)
         {
             Log.Error(exception);
-        }
-
-        public void Exception(Exception exception, string format, params object[] args)
-        {
-            throw new NotImplementedException();
-        }
-        
-
-        public void Fatal(string message)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Fatal(string format, params object[] args)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Info(string message)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Info(string format, params object[] args)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Warn(string message)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Warn(string format, params object[] args)
-        {
-            throw new NotImplementedException();
         }
     }
 }
