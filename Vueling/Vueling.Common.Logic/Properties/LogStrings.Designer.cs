@@ -79,7 +79,7 @@ namespace Vueling.Common.Logic.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Error.
+        ///   Busca una cadena traducida similar a Error on SQL insert.
         /// </summary>
         public static string InsertError {
             get {

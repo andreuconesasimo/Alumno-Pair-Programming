@@ -22,7 +22,7 @@ namespace Vueling.DataAccess.Dao
             try
             {
                 logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);                
-                ConnectionString = "Server = localhost; Database = TutorialDB; Integrated Security = True; ";
+                ConnectionString = "Server = localhost; Database = TutorialDB; Integrated Security = True;";
                 logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);
             }
             catch (Exception ex)
@@ -55,13 +55,11 @@ namespace Vueling.DataAccess.Dao
                     command.Parameters.Clear();
                     command.CommandText = "SELECT @@IDENTITY";
                     alumno.ID = Convert.ToInt32(command.ExecuteScalar());
-                    
-                    // Check Error
-                    if (result < 0)
-                        logger.Error(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.InsertError);
-                    else
+                                            
+                    if (result < 0)                        
+                        logger.Error(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.InsertError);       
+                    else                      
                         logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + alumno.ToString());
-
                 }
             }
             logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);

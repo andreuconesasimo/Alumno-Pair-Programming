@@ -70,24 +70,6 @@ namespace Vueling.Common.Logic.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a INSERT INTO dbo.SMS_PW (id,username,password,email) VALUES (@id,@username,@password, @email).
-        /// </summary>
-        public static string ConnectionString {
-            get {
-                return ResourceManager.GetString("ConnectionString", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        public static string DeleteQuery {
-            get {
-                return ResourceManager.GetString("DeleteQuery", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a en-GB.
         /// </summary>
         public static string English {
@@ -102,15 +84,6 @@ namespace Vueling.Common.Logic.Properties {
         public static string FileType {
             get {
                 return ResourceManager.GetString("FileType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        public static string InsertQuery {
-            get {
-                return ResourceManager.GetString("InsertQuery", resourceCulture);
             }
         }
         
@@ -133,15 +106,6 @@ namespace Vueling.Common.Logic.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        public static string SelectQuery {
-            get {
-                return ResourceManager.GetString("SelectQuery", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a es-ES.
         /// </summary>
         public static string Spanish {
@@ -156,15 +120,6 @@ namespace Vueling.Common.Logic.Properties {
         public static string TxtFile {
             get {
                 return ResourceManager.GetString("TxtFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        public static string UpdateQuery {
-            get {
-                return ResourceManager.GetString("UpdateQuery", resourceCulture);
             }
         }
         

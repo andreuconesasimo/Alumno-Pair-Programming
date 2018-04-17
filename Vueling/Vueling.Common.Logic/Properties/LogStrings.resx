@@ -124,7 +124,7 @@
     <value>ends</value>
   </data>
   <data name="InsertError" xml:space="preserve">
-    <value>Error</value>
+    <value>Error on SQL insert</value>
   </data>
   <data name="Instantiating" xml:space="preserve">
     <value>instantiating</value>

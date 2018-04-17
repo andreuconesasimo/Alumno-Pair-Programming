@@ -105,8 +105,7 @@ namespace Vueling.Presentation.Winsite
             }
             catch (Exception ex)
             {
-                logger.Exception(ex);
-                throw;
+                logger.Exception(ex);                
             }
             
         }
@@ -123,27 +122,35 @@ namespace Vueling.Presentation.Winsite
             catch (Exception ex)
             {
                 logger.Exception(ex);
-                throw;
+                ExceptionMessage.Show(ex);
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox box = (ComboBox)sender;
-            Idioma idioma = (Idioma)box.SelectedIndex;
-            switch (idioma)
+            try
             {
-                case Idioma.Catalan:
-                    Language.ChangeLanguage(ConfigStrings.Catalan);
-                    break;
-                case Idioma.English:
-                    Language.ChangeLanguage(ConfigStrings.English);
-                    break;                
-                case Idioma.Spanish:
-                    Language.ChangeLanguage(ConfigStrings.Spanish);
-                    break;
-            }            
-            UpdateControls();
+                ComboBox box = (ComboBox)sender;
+                Idioma idioma = (Idioma)box.SelectedIndex;
+                switch (idioma)
+                {
+                    case Idioma.Catalan:
+                        Language.ChangeLanguage(ConfigStrings.Catalan);
+                        break;
+                    case Idioma.English:
+                        Language.ChangeLanguage(ConfigStrings.English);
+                        break;
+                    case Idioma.Spanish:
+                        Language.ChangeLanguage(ConfigStrings.Spanish);
+                        break;
+                }
+                UpdateControls();
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
         }
 
         private void UpdateControls()

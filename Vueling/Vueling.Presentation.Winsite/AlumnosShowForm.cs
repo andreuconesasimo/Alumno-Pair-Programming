@@ -29,6 +29,7 @@ namespace Vueling.Presentation.Winsite
             catch (Exception ex)
             {
                 logger.Exception(ex);
+                ExceptionMessage.Show(ex);
             }
         }
                 
@@ -43,7 +44,6 @@ namespace Vueling.Presentation.Winsite
             catch (Exception ex)
             {
                 logger.Exception(ex);                
-                throw;
             }
         }
 
@@ -182,13 +182,21 @@ namespace Vueling.Presentation.Winsite
 
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            string guid = txtBoxGuidBorrar.Text;
-            var button = (Button)sender;
-            logger.Debug(button.Name + " " + LogStrings.Clicked);            
-            alumnos = alumnoBL.DeleteByGuid(guid);
-            CargarGrid(alumnos);
-            logger.Debug(button.Name + " " + LogStrings.Ends);
 
+            try
+            {
+                string guid = txtBoxGuidBorrar.Text;
+                var button = (Button)sender;
+                logger.Debug(button.Name + " " + LogStrings.Clicked);
+                alumnos = alumnoBL.DeleteByGuid(guid);
+                CargarGrid(alumnos);
+                logger.Debug(button.Name + " " + LogStrings.Ends);
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
         }
     }
 }

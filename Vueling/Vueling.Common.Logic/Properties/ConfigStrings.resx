@@ -120,20 +120,11 @@
   <data name="Catalan" xml:space="preserve">
     <value>ca-ES</value>
   </data>
-  <data name="ConnectionString" xml:space="preserve">
-    <value>INSERT INTO dbo.SMS_PW (id,username,password,email) VALUES (@id,@username,@password, @email)</value>
-  </data>
-  <data name="DeleteQuery" xml:space="preserve">
-    <value />
-  </data>
   <data name="English" xml:space="preserve">
     <value>en-GB</value>
   </data>
   <data name="FileType" xml:space="preserve">
     <value>tipoFichero</value>
-  </data>
-  <data name="InsertQuery" xml:space="preserve">
-    <value />
   </data>
   <data name="JsonFile" xml:space="preserve">
     <value>ListadoAlumnos.json</value>
@@ -141,17 +132,11 @@
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
-  <data name="SelectQuery" xml:space="preserve">
-    <value />
-  </data>
   <data name="Spanish" xml:space="preserve">
     <value>es-ES</value>
   </data>
   <data name="TxtFile" xml:space="preserve">
     <value>ListadoAlumnos.txt</value>
-  </data>
-  <data name="UpdateQuery" xml:space="preserve">
-    <value />
   </data>
   <data name="XmlFile" xml:space="preserve">
     <value>ListadoAlumnos.xml</value>
