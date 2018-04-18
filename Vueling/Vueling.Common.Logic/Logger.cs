@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
-[assembly: log4net.Config.XmlConfigurator(Watch = true, ConfigFile="log4net.config")]
+[assembly: log4net.Config.XmlConfigurator(Watch = true, ConfigFile = "log4net.config")]
 namespace Vueling.Common.Logic
 {
     public sealed class Logger : ILogger
     {
         private readonly log4net.ILog Log;
-        private readonly bool isInfoEnabled = true;
-        private readonly bool isWarnEnabled = true;
         private readonly bool isDebugEnabled = true;
         private readonly bool isErrorEnabled = true;
-        private readonly bool isFatalEnabled = true;
 
         public TimeSpan ExecutionTime { get; set; }
         public int counter { get; set; }

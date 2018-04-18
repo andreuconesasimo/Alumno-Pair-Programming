@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vueling.Common.Logic.Model
 {
@@ -53,6 +50,15 @@ namespace Vueling.Common.Logic.Model
             Nombre = nombre;
             Apellidos = apellidos;
             DNI = dNI;
+            FechaNacimiento = fechaNacimiento;
+        }
+
+        protected Persona(string guid, string nombre, string apellidos, string dni, DateTime fechaNacimiento)
+        {
+            GUID = new Guid(guid);
+            Nombre = nombre;
+            Apellidos = apellidos;
+            DNI = dni;
             FechaNacimiento = fechaNacimiento;
         }
         #endregion

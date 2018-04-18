@@ -70,6 +70,24 @@ namespace Vueling.Common.Logic.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a DbConnection.
+        /// </summary>
+        public static string DbConnection {
+            get {
+                return ResourceManager.GetString("DbConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Server = localhost; Database = TutorialDB; Integrated Security = True;.
+        /// </summary>
+        public static string DbConnectionString {
+            get {
+                return ResourceManager.GetString("DbConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a en-GB.
         /// </summary>
         public static string English {

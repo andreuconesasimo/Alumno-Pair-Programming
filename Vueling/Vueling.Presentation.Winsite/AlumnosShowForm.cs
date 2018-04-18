@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Vueling.Business.Logic;
 using Vueling.Common.Logic;
 using Vueling.Common.Logic.Enums;
+using Vueling.Common.Logic.Helpers;
 using Vueling.Common.Logic.Model;
 using Vueling.Common.Logic.Properties;
 
@@ -21,7 +22,7 @@ namespace Vueling.Presentation.Winsite
         {
             try
             {
-                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);                
                 InitializeComponent();
                 alumnoBL = new AlumnoBL();                
                 CargarDatosTxt();
@@ -191,6 +192,61 @@ namespace Vueling.Presentation.Winsite
                 alumnos = alumnoBL.DeleteByGuid(guid);
                 CargarGrid(alumnos);
                 logger.Debug(button.Name + " " + LogStrings.Ends);
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string guid = txtBoxGuidBorrar.Text;
+                var button = (Button)sender;
+                logger.Debug(button.Name + " " + LogStrings.Clicked);
+                Alumno alumno = alumnoBL.SelectByGuid(guid);
+                Alumno aux = new Alumno();
+                if (!alumno.Equals(aux))
+                {
+                    panelEdicion.Visible = true;
+                    CargarDatosEdicion(alumno);
+                }                
+                logger.Debug(button.Name + " " + LogStrings.Ends);
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
+        }
+
+        private void CargarDatosEdicion(Alumno alumno)
+        {
+            txtGuidEdicion.Text = alumno.GUID.ToString();
+            txtNombreEdicion.Text = alumno.Nombre;
+            txtApellidosEdicion.Text = alumno.Apellidos;
+            txtDNIEdicion.Text = alumno.DNI;
+            dtpFechNacimientoEdicion.Value = alumno.FechaNacimiento;             
+        }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtGuidEdicion.Text.Equals(""))
+                {
+                    
+                    var button = (Button)sender;
+                    logger.Debug(button.Name + " " + LogStrings.Clicked);
+                    Alumno alumno = new Alumno(txtGuidEdicion.Text, txtNombreEdicion.Text, txtApellidosEdicion.Text, txtDNIEdicion.Text, dtpFechNacimientoEdicion.Value);
+                    alumnoBL.Update(alumno);
+                    alumno = alumnoBL.SelectByGuid(txtGuidEdicion.Text);
+                    MessageBox.Show(InfoStrings.ResourceManager.GetString("UpdatedStudent") + Environment.NewLine + alumno.ToString());
+                    logger.Debug(button.Name + " " + LogStrings.Ends);
+                }
             }
             catch (Exception ex)
             {

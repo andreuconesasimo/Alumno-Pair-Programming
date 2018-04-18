@@ -11,5 +11,6 @@ namespace Vueling.DataAccess.Dao.Interfaces
         List<Alumno> GetAll();
         List<Alumno> GetSingletonInstance();
         List<Alumno> DeleteByGuid(string guid);
+        void Update(Alumno alumno);
     }
 }

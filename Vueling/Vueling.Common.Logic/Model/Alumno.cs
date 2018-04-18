@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vueling.Common.Logic.Model
 {
@@ -21,6 +17,10 @@ namespace Vueling.Common.Logic.Model
         }
 
         public Alumno(int iD, string nombre, string apellidos, string dNI, DateTime fechaNacimiento) : base(iD, nombre, apellidos, dNI, fechaNacimiento)
+        {
+        }
+
+        public Alumno(string guid, string nombre, string apellidos, string dni, DateTime fechaNacimiento) : base(guid, nombre, apellidos, dni, fechaNacimiento)
         {
         }
 

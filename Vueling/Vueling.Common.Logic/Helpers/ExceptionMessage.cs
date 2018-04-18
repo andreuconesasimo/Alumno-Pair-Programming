@@ -2,9 +2,9 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Vueling.Common.Logic.Exceptions;
+using Vueling.Common.Logic.Exceptionsa;
 
-namespace Vueling.Presentation.Winsite
+namespace Vueling.Common.Logic.Helpers
 {
     public static class ExceptionMessage
     {

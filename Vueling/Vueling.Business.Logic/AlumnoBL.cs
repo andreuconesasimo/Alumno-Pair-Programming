@@ -173,5 +173,37 @@ namespace Vueling.Business.Logic
                 throw;
             }
         }
+
+        public Alumno SelectByGuid(string guid)
+        {
+            try
+            {
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
+                Alumno alumno = ficheroAlumno.Select(new Guid(guid));
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);
+                return alumno;
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                throw;
+            }
+        }
+
+        public void Update(Alumno alumno)
+        {
+            try
+            {
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
+                ficheroAlumno.Update(alumno);
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);
+                
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                throw;
+            }
+        }
     }
 }

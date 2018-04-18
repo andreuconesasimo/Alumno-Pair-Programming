@@ -148,6 +148,27 @@
   <data name="labelFechaRegistro.Text" xml:space="preserve">
     <value>Data de registre</value>
   </data>
+  <data name="buttonBorrar.Text" xml:space="preserve">
+    <value>Esborrar</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Data de naixement</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Cognoms</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Nom</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form mostrar alumnes</value>
   </data>

@@ -190,5 +190,10 @@ namespace Vueling.DataAccess.Dao
                 throw;
             }
         }
+                
+        public void Update(Alumno alumno)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

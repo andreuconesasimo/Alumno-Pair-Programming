@@ -56,7 +56,23 @@
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.txtBoxGuidBorrar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelEdicion = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGuidEdicion = new System.Windows.Forms.TextBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.txtDNIEdicion = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpFechNacimientoEdicion = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtApellidosEdicion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombreEdicion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlumnos)).BeginInit();
+            this.panelEdicion.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridAlumnos
@@ -214,39 +230,134 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // panelEdicion
+            // 
+            this.panelEdicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelEdicion.Controls.Add(this.label7);
+            this.panelEdicion.Controls.Add(this.txtGuidEdicion);
+            this.panelEdicion.Controls.Add(this.buttonGuardar);
+            this.panelEdicion.Controls.Add(this.txtDNIEdicion);
+            this.panelEdicion.Controls.Add(this.label6);
+            this.panelEdicion.Controls.Add(this.dtpFechNacimientoEdicion);
+            this.panelEdicion.Controls.Add(this.label4);
+            this.panelEdicion.Controls.Add(this.txtApellidosEdicion);
+            this.panelEdicion.Controls.Add(this.label3);
+            this.panelEdicion.Controls.Add(this.txtNombreEdicion);
+            this.panelEdicion.Controls.Add(this.label2);
+            resources.ApplyResources(this.panelEdicion, "panelEdicion");
+            this.panelEdicion.Name = "panelEdicion";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // txtGuidEdicion
+            // 
+            resources.ApplyResources(this.txtGuidEdicion, "txtGuidEdicion");
+            this.txtGuidEdicion.Name = "txtGuidEdicion";
+            // 
+            // buttonGuardar
+            // 
+            resources.ApplyResources(this.buttonGuardar, "buttonGuardar");
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
+            // txtDNIEdicion
+            // 
+            resources.ApplyResources(this.txtDNIEdicion, "txtDNIEdicion");
+            this.txtDNIEdicion.Name = "txtDNIEdicion";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // dtpFechNacimientoEdicion
+            // 
+            this.dtpFechNacimientoEdicion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.dtpFechNacimientoEdicion, "dtpFechNacimientoEdicion");
+            this.dtpFechNacimientoEdicion.Name = "dtpFechNacimientoEdicion";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // txtApellidosEdicion
+            // 
+            resources.ApplyResources(this.txtApellidosEdicion, "txtApellidosEdicion");
+            this.txtApellidosEdicion.Name = "txtApellidosEdicion";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // txtNombreEdicion
+            // 
+            resources.ApplyResources(this.txtNombreEdicion, "txtNombreEdicion");
+            this.txtNombreEdicion.Name = "txtNombreEdicion";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // buttonEditar
+            // 
+            resources.ApplyResources(this.buttonEditar, "buttonEditar");
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtGuid);
+            this.panel1.Controls.Add(this.labelGuid);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.labelId);
+            this.panel1.Controls.Add(this.buttonBuscar);
+            this.panel1.Controls.Add(this.chckBxFechaNacimiento);
+            this.panel1.Controls.Add(this.dtpFechaNacimiento);
+            this.panel1.Controls.Add(this.labelDni);
+            this.panel1.Controls.Add(this.labelFechaRegistro);
+            this.panel1.Controls.Add(this.txtDni);
+            this.panel1.Controls.Add(this.chckBxFechaRegistro);
+            this.panel1.Controls.Add(this.labelFechaNacimiento);
+            this.panel1.Controls.Add(this.dtpFechaRegistro);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.labelEdad);
+            this.panel1.Controls.Add(this.labelApellidos);
+            this.panel1.Controls.Add(this.labelNombre);
+            this.panel1.Controls.Add(this.txtEdad);
+            this.panel1.Controls.Add(this.txtApellidos);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
             // AlumnosShowForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBoxGuidBorrar);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonSql);
-            this.Controls.Add(this.chckBxFechaNacimiento);
-            this.Controls.Add(this.chckBxFechaRegistro);
-            this.Controls.Add(this.labelFechaRegistro);
-            this.Controls.Add(this.labelEdad);
-            this.Controls.Add(this.labelFechaNacimiento);
-            this.Controls.Add(this.labelId);
-            this.Controls.Add(this.labelDni);
-            this.Controls.Add(this.labelApellidos);
-            this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.labelGuid);
-            this.Controls.Add(this.dtpFechaRegistro);
-            this.Controls.Add(this.txtEdad);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.txtDni);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.dtpFechaNacimiento);
-            this.Controls.Add(this.txtGuid);
-            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonXml);
             this.Controls.Add(this.buttonJson);
             this.Controls.Add(this.buttonTxt);
             this.Controls.Add(this.dataGridAlumnos);
             this.Name = "AlumnosShowForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlumnos)).EndInit();
+            this.panelEdicion.ResumeLayout(false);
+            this.panelEdicion.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +392,19 @@
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.TextBox txtBoxGuidBorrar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelEdicion;
+        private System.Windows.Forms.TextBox txtDNIEdicion;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpFechNacimientoEdicion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtApellidosEdicion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombreEdicion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtGuidEdicion;
+        private System.Windows.Forms.Panel panel1;
     }
 }

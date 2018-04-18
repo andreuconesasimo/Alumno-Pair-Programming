@@ -140,10 +140,10 @@
     <value>Birth date</value>
   </data>
   <data name="labelEdad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>26, 13</value>
   </data>
   <data name="labelEdad.Text" xml:space="preserve">
-    <value>Years</value>
+    <value>Age</value>
   </data>
   <data name="labelFechaRegistro.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -162,6 +162,33 @@
   </data>
   <data name="chckBxFechaNacimiento.Text" xml:space="preserve">
     <value>Enable</value>
+  </data>
+  <data name="buttonBorrar.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="buttonGuardar.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Birth date</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Surnames</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="buttonEditar.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Show students form</value>
