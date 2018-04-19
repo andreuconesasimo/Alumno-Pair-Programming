@@ -195,6 +195,7 @@ namespace Vueling.Business.Logic
             try
             {
                 logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
+                alumno.Edad = CalcularEdad(DateTime.Now, alumno.FechaNacimiento);
                 ficheroAlumno.Update(alumno);
                 logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);
                 

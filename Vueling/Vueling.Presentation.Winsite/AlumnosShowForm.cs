@@ -243,10 +243,29 @@ namespace Vueling.Presentation.Winsite
                     logger.Debug(button.Name + " " + LogStrings.Clicked);
                     Alumno alumno = new Alumno(txtGuidEdicion.Text, txtNombreEdicion.Text, txtApellidosEdicion.Text, txtDNIEdicion.Text, dtpFechNacimientoEdicion.Value);
                     alumnoBL.Update(alumno);
+                    CargarGrid(alumnoBL.GetAll());
                     alumno = alumnoBL.SelectByGuid(txtGuidEdicion.Text);
                     MessageBox.Show(InfoStrings.ResourceManager.GetString("UpdatedStudent") + Environment.NewLine + alumno.ToString());
                     logger.Debug(button.Name + " " + LogStrings.Ends);
                 }
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
+        }
+
+        private void btnStoredProcedure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var button = (Button)sender;
+                logger.Debug(button.Name + " " + LogStrings.Clicked);
+                alumnoBL.SeleccionarTipoFichero(Extension.SP);
+                alumnos = alumnoBL.GetAll();
+                CargarGrid(alumnos);
+                logger.Debug(button.Name + " " + LogStrings.Ends);
             }
             catch (Exception ex)
             {

@@ -11,6 +11,7 @@
         TXT = 1,
         JSON,
         XML,
-        SQL
+        SQL,
+        SP
     }
 }

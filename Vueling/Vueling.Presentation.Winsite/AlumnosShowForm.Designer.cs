@@ -70,6 +70,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStoredProcedure = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlumnos)).BeginInit();
             this.panelEdicion.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -337,10 +338,18 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // btnStoredProcedure
+            // 
+            resources.ApplyResources(this.btnStoredProcedure, "btnStoredProcedure");
+            this.btnStoredProcedure.Name = "btnStoredProcedure";
+            this.btnStoredProcedure.UseVisualStyleBackColor = true;
+            this.btnStoredProcedure.Click += new System.EventHandler(this.btnStoredProcedure_Click);
+            // 
             // AlumnosShowForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnStoredProcedure);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.panelEdicion);
@@ -406,5 +415,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtGuidEdicion;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnStoredProcedure;
     }
 }

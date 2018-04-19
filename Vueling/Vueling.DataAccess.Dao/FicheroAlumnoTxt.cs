@@ -178,7 +178,24 @@ namespace Vueling.DataAccess.Dao
 
         public void Update(Alumno alumno)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var lines = File.ReadAllLines(Ruta);
+                var line = lines.Where(x => x.Contains(alumno.GUID.ToString())).ToArray();
+                Alumno alumnoAeditar = Deserialize(line[0]);
+                alumnoAeditar.Nombre = alumno.Nombre;
+                alumnoAeditar.Apellidos = alumno.Apellidos;
+                alumnoAeditar.DNI = alumno.DNI;
+                alumnoAeditar.FechaNacimiento = alumno.FechaNacimiento;
+                lines[lines.ToList().IndexOf(lines.First(x => x.Contains(alumno.GUID.ToString())))] = alumnoAeditar.ToString();
+                File.WriteAllLines(Ruta, lines);
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);                
+                throw;
+            }
         }
+        
     }
 }

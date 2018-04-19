@@ -31,6 +31,9 @@ namespace Vueling.DataAccess.Dao
                     case Extension.SQL:
                         logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + Extension.SQL + " " + LogStrings.Starts);
                         return new FicheroAlumnoSql();
+                    case Extension.SP:
+                        logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + Extension.SQL + " " + LogStrings.Starts);
+                        return new FicheroAlumnoSP();
                     default:
                         logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + Extension.TXT + " " + LogStrings.Starts);
                         return new FicheroAlumnoTxt();

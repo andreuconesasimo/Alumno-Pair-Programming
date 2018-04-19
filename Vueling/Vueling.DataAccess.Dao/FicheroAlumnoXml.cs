@@ -193,7 +193,38 @@ namespace Vueling.DataAccess.Dao
                 
         public void Update(Alumno alumno)
         {
-            throw new NotImplementedException();
+            try
+            {
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
+
+                List<Alumno> alumnosExistentes = DeserializeXml();
+                bool encontrado = false;
+                int i = 0;
+                while (!encontrado && i < alumnosExistentes.Count)
+                {
+                    if (alumnosExistentes[i].GUID == alumno.GUID)
+                    {
+                        alumnosExistentes[i].Nombre = alumno.Nombre;
+                        alumnosExistentes[i].Apellidos = alumno.Apellidos;
+                        alumnosExistentes[i].DNI = alumno.DNI;
+                        alumnosExistentes[i].Edad = alumno.Edad;
+                        alumnosExistentes[i].FechaNacimiento = alumno.FechaNacimiento;
+                        encontrado = true;
+                    }
+                    ++i;
+                }
+                if (encontrado)
+                {
+                    string xmlNuevo = SerializeXml(alumnosExistentes);
+                    FileUtils.EscribirFichero(xmlNuevo, Ruta);
+                }
+                logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Ends);                
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                throw;
+            }
         }
     }
 }

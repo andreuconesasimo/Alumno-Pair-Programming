@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FicheroAlumnoSP.cs" />
     <Compile Include="FicheroAlumnoSql.cs" />
     <Compile Include="ListadoAlumnosXml.cs" />
     <Compile Include="ListadoAlumnosJson.cs" />

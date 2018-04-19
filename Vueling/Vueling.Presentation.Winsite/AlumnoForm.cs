@@ -25,6 +25,7 @@ namespace Vueling.Presentation.Winsite
             {               
                 logger.Debug(MethodBase.GetCurrentMethod().DeclaringType.Name + " " + LogStrings.Starts);
                 Language.InitializeLanguage();
+                Configuration.DbCreateProcedures();
                 InitializeComponent();   
                 alumno = new Alumno();
                 alumnoBL = new AlumnoBL();
@@ -181,6 +182,24 @@ namespace Vueling.Presentation.Winsite
                 logger.Debug(button.Name + " " + LogStrings.Clicked);
                 LoadAlumnoData();
                 alumnoBL.SeleccionarTipoFichero(Extension.SQL);
+                alumnoBL.Add(alumno);
+                logger.Debug(button.Name + " " + LogStrings.Ends);
+            }
+            catch (Exception ex)
+            {
+                logger.Exception(ex);
+                ExceptionMessage.Show(ex);
+            }
+        }
+
+        private void btnStoredProcedure_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var button = (Button)sender;
+                logger.Debug(button.Name + " " + LogStrings.Clicked);
+                LoadAlumnoData();
+                alumnoBL.SeleccionarTipoFichero(Extension.SP);
                 alumnoBL.Add(alumno);
                 logger.Debug(button.Name + " " + LogStrings.Ends);
             }
